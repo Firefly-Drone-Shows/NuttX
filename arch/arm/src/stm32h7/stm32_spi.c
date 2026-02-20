@@ -2742,6 +2742,8 @@ struct spi_dev_s *stm32_spibus_initialize(int bus)
           stm32_configgpio(GPIO_SPI6_SCK);
           stm32_configgpio(GPIO_SPI6_MISO);
           stm32_configgpio(GPIO_SPI6_MOSI);
+	  //stm32_configgpio(GPIO_SPI6_NSS); // GPIO_OUTPUT|GPIO_SPEED_50MHz|GPIO_PORTG|GPIO_PIN8
+	  stm32_configgpio(GPIO_OUTPUT|GPIO_SPEED_50MHz|GPIO_PORTG|GPIO_PIN8); // GPIO_OUTPUT|GPIO_SPEED_50MHz|GPIO_PORTG|GPIO_PIN8
 
           /* Set up default configuration: Master, 8-bit, etc. */
 

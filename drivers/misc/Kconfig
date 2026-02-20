@@ -86,4 +86,11 @@ config DRVR_INVALIDATE
 
 endif # DRVR_WRITEBUFFER || DRVR_READAHEAD
 
+config MAVSPI
+    bool "MAVLink SPI character driver"
+    default n
+    depends on SPI
+    ---help---
+      Provides /dev/mavspiX as a byte-stream device backed by SPI.
+
 endmenu # Buffering
